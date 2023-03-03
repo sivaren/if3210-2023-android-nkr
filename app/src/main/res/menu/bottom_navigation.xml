@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="Twibbon"
+        android:id="@+id/nav_twibbon"
+        android:icon="@drawable/ic_camera"/>
+    <item android:title="Location"
+        android:id="@+id/nav_location"
+        android:icon="@drawable/ic_location"/>
+    <item android:title="Menu"
+        android:id="@+id/nav_menu"
+        android:icon="@drawable/ic_food"/>
+    <item android:title="Cart"
+        android:id="@+id/nav_cart"
+        android:icon="@drawable/ic_cart"/>
+</menu>

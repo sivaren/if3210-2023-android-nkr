@@ -1,0 +1,125 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="menuItem"
+            type="com.example.majika.model.MenuItem" />
+        <variable
+            name="increaseClickListener"
+            type="com.example.majika.adapter.MenuItemIncreaseListener" />
+        <variable
+            name="decreaseClickListener"
+            type="com.example.majika.adapter.MenuItemDecreaseListener" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="10dp"
+            app:cardCornerRadius="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:padding="16dp"
+                android:weightSum="3">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:orientation="vertical"
+                    android:outlineProvider="bounds">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@{menuItem.name}"
+                        android:textColor="?attr/colorPrimary"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        tools:text="Broadbeans" />
+
+                    <TextView
+                        android:id="@+id/soldText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        tools:text="10RB+ Terjual" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="@{menuItem.description}"
+                        tools:text="Mollitia pariatur non quo dolor voluptate." />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/price"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:textAlignment="center"
+                        android:textColor="?attr/colorPrimary"
+                        android:textSize="18dp"
+                        android:textStyle="bold"
+                        tools:text="Rp. 794.000" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingHorizontal="16dp"
+                        android:paddingVertical="12dp">
+
+                        <ImageButton
+                            android:id="@+id/imageButton2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="false"
+                            android:layout_alignParentRight="true"
+                            android:background="#F55951"
+                            android:clickable="true"
+                            app:srcCompat="@drawable/baseline_add_24" />
+
+                        <ImageButton
+                            android:id="@+id/imageButton4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:background="#F55951"
+                            android:clickable="true"
+                            app:srcCompat="@drawable/baseline_remove_24" />
+
+                        <TextView
+                            android:id="@+id/quantity"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@id/imageButton2"
+                            android:textAlignment="center"
+                            android:textSize="16dp"
+                            android:textStyle="bold"
+                            tools:text="0" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+
+</layout>

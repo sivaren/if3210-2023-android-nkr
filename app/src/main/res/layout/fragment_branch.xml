@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".view.BranchFragment">
+
+    <data>
+        <variable
+            name="branchFragment"
+            type="com.example.majika.view.BranchFragment" />
+        <variable
+            name="branchViewModel"
+            type="com.example.majika.viewmodel.BranchViewModel" />
+    </data>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/branchRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F5F5F5"
+        android:scrollbars="vertical"
+        app:layoutManager="LinearLayoutManager" />
+</layout>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".view.MenuFragment">
+
+    <data>
+        <variable
+            name="menuViewModel"
+            type="com.example.majika.viewmodel.MenuViewModel" />
+        <variable name="menuFragment" type="com.example.majika.view.MenuFragment" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F5F5F5"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/searchView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:background="#FFFFFF"
+            app:queryHint="Cari..."
+            app:iconifiedByDefault="false"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical"
+            app:layoutManager="LinearLayoutManager"
+            app:listFoodData="@{menuViewModel.filteredFoodItem}"
+            app:listDrinkData="@{menuViewModel.filteredDrinkItem}"
+            tools:itemCount="32" />
+    </LinearLayout>
+
+</layout>
